@@ -2,6 +2,8 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/s3cabinet`. To experiment with that code, run `bin/console` for an interactive prompt.
 
+![Circle CI](https://circleci.com/gh/davidsiaw/s3cabinet/tree/master.svg?style=shield&circle-token=:circle-token)
+
 TODO: Delete this and the text above, and describe your gem
 
 ## Installation
