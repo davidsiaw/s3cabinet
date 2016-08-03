@@ -14,13 +14,15 @@ module S3Cabinet
 
 		@region_to_bucket_endpoint = {
 			"us-east-1" => "https://s3.amazonaws.com",
-			"us-west-2" => "https://s3-us-west-2.amazonaws.com",
 			"us-west-1" => "https://s3-us-west-1.amazonaws.com",
+			"us-west-2" => "https://s3-us-west-2.amazonaws.com",
 			"eu-west-1" => "https://s3-eu-west-1.amazonaws.com",
 			"eu-central-1" => "https://s3.eu-central-1.amazonaws.com",
+			"ap-south-1" => "https://s3.ap-south-1.amazonaws.com",
+			"ap-northeast-1" => "https://s3-ap-northeast-1.amazonaws.com",
+			"ap-northeast-2" => "https://s3-ap-northeast-2.amazonaws.com",
 			"ap-southeast-1" => "https://s3-ap-southeast-1.amazonaws.com",
 			"ap-southeast-2" => "https://s3-ap-southeast-2.amazonaws.com",
-			"ap-northeast-1" => "https://s3-ap-northeast-1.amazonaws.com",
 			"sa-east-1" => "https://s3-sa-east-1.amazonaws.com",
 			"cn-north-1" => "https://s3.cn-north-1.amazonaws.com.cn"
 		}
