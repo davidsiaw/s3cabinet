@@ -36,9 +36,21 @@ module S3Cabinet
   		end
   	end
 
+  def endpoint_url
+  	@endpoint_url ||= begin
+  		theurl = @region_to_bucket_endpoint[@region]
+
+  		if theurl.nil?
+  			theurl = "https://s3.#{@region}.amazonaws.com"
+  		end
+
+  		theurl
+  	end
+  end
+
 	def s3
 		if @s3 == nil
-			endpoint = @region_to_bucket_endpoint[@region]
+			endpoint = endpoint_url
 			if endpoint
 				@s3 = Aws::S3::Client.new(access_key_id: @access_id, secret_access_key: @access_key, region: @region)
 			else
@@ -49,15 +61,13 @@ module S3Cabinet
 	end
 
 	def url(key)
-
-		the_url = @region_to_bucket_endpoint[@region]
+		the_url = endpoint_url
 
 		if the_url
 			"#{the_url}/#{@bucket}/#{key}"
 		else
 			"#{@region}/#{@bucket}/#{key}"
 		end
-
 	end
 
 	def set(key, value)
